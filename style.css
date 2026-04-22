@@ -9,8 +9,8 @@ body {
 }
 
 h1 {
-    color: #a1aed4;                            /* hex */
-    text-align: center;
+    color: #080e20;                            /* hex */
+    text-align: left;
 }
 
 h2 {
@@ -152,5 +152,78 @@ main {
     }
     nav ul {
         flex-direction: column;
+    }
+}
+
+
+/* Class Selector */
+.title {
+    font-style: italic;
+}
+
+/* ID Selector */
+#main-title {
+    letter-spacing: 2px;
+}
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Element Selector */
+footer {
+    color: white;
+}
+
+/* Attribute Selector */
+input[type="email"] {
+    border: 2px solid #1e3a8a;
+}
+
+/* Pseudo-class Selector */
+p:hover {
+    color: #b4141e;
+}
+
+/* Selector List */
+h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Descendant Combinator */
+section p {
+    line-height: 1.5;
+}
+
+/* Child Combinator */
+main > h2 {
+    margin-top: 0;
+}
+
+/* General Sibling Combinator */
+h3 ~ ul {
+    font-weight: bold;
+}
+
+/* Adjacent Sibling Combinator */
+h2 + p {
+    font-size: 1.1rem;
+}
+
+/* Combining Two Selectors */
+h2.title {
+    text-decoration: underline;
+}
+
+/* :has() */
+section:has(video) {
+    border: 2px dashed #1e3a8a;
+}
+
+/* Nested Selector */
+nav {
+    & ul {
+        list-style: none;
     }
 }
