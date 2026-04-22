@@ -1,1 +1,2 @@
-# Lab 2 - Starter
+# Lab 3
+https://tadavid7.github.io/sp26-cse110-lab3/
