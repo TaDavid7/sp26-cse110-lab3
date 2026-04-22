@@ -1,0 +1,156 @@
+/* Import 3rd party font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Color */
+body {
+    color: rgb(34, 34, 34);                    /* rgb */
+    background-color: rgba(230, 240, 255, 1);  /* rgba */
+    font-family: 'Roboto', sans-serif;         /* 3rd party font */
+}
+
+h1 {
+    color: #a1aed4;                            /* hex */
+    text-align: center;
+}
+
+h2 {
+    color: #FFF;
+    background-color: hsl(210, 50%, 40%);      /* hsl */
+}
+
+h3 {
+    color: hsla(45, 90%, 35%, 1);              /* hsla */
+}
+
+em {
+    color: orange;                             /* color name */
+}
+
+strong {
+    color: color(display-p3 0.1 0.3 0.9);      /* wider-gamut, predefined color space */
+}
+
+b {
+    color: color-mix(in srgb, red 70%, black); /* wider-gamut, color mix */
+}
+
+/* CSS Variable & Fallback */
+:root {
+    --main-color: #e9e3a9;
+}
+nav {
+    background-color: #f5c518;                 /* fallback */
+    background-color: var(--main-color);       /* variable */
+}
+
+/* Background */
+header {
+    background-color: #a5aec7;
+}
+
+/* Units: 3 relative + 3 absolute */
+h1 {
+    font-size: 2rem;        /* relative */
+    margin-bottom: 1em;     /* relative */
+    line-height: 150%;      /* relative */
+}
+footer {
+    font-size: 14px;        /* absolute */
+    padding: 0.25in;        /* absolute */
+    margin-top: 20pt;       /* absolute */
+}
+
+/* Box Model  */
+nav {
+    margin-top: 10px;       /* long */
+    margin-bottom: 10px;
+    margin-left: auto;      /* auto */
+    margin-right: auto;
+}
+main {
+    margin: 20px 10px 20px 10px;   /* short */
+}
+
+/* Box Model - Padding */
+main {
+    padding-top: 15px;      /* long */
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+section {
+    padding: 10px 20px 10px 20px;  /* short */
+}
+
+/* Borders */
+img {
+    border-style: solid;
+    border-color: #9da8c6;
+    border-width: 4px;
+    border-radius: 10px;
+}
+
+/* Text */
+p {
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+}
+
+/* none/inline-block */
+audio {
+    display: none;
+}
+nav li {
+    display: inline-block;
+}
+
+/* Sizing */
+main {
+    height: auto;
+    width: 90%;
+    max-width: 900px;
+    min-width: 300px;
+}
+
+/* Position: 2 values */
+header {
+    position: relative;
+}
+footer {
+    position: static;
+}
+
+/* Pseudo-classes */
+nav a:hover {
+    color: red;
+}
+button:active {
+    background-color: red;
+}
+
+/* Flexbox */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+/* Responsiveness - Media Query */
+@media (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
